@@ -4,26 +4,35 @@ public class BasicEx {
 	public static void main(String[] args) {
 		
 		
-		Horse hh = new Horse();
+		/*Horse hh = new Horse();
 		hh.walk();
-		hh.eats();
+		hh.eats();*/
+		
+		chicken ck = new chicken();
+		ck.eats();
+		ck.walk();
+		
+		
 	}
 
 }
 
-abstract class Animal{
+interface Animal{
 	abstract void walk ();
-	public void eats() {
-		System.out.println("Eating......");
-	}
+	public void eats();
 }
-class Horse extends Animal{
+/*class Horse extends Animal{
 	public void walk() {
 		System.out.println("walk on 4 legs.....");
 	}
-}
-class chicken extends Animal{
+}*/
+class chicken implements Animal{
 	public void walk() {
 		System.out.println("walk on 2 legs......");
+	}
+	@Override
+	public void eats() {
+		System.out.println("hgyf");
+		
 	}
 }
